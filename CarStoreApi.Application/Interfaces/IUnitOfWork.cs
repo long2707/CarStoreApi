@@ -9,17 +9,18 @@ namespace CarStoreApi.Application.Interfaces
 {
     public interface IUnitOfWork: IDisposable
     {
-        IUserRepository User { get; }
-        IBaseRepository<PenddingUser> PenddingUser { get; }
-        IRoleRepository Role { get; }
+        IUserRepository Users { get; }
+        IBaseRepository<PenddingUser> PenddingUsers { get; }
+        IRoleRepository Roles { get; }
         IBaseRepository<UserRoles> UserRoles { get; }
-        IRateRepository Rate { get; }
-        IBaseRepository<CarBrand> CarBrand { get; }
+        IBaseRepository<Favorite> Favorites { get; }
+        IRateRepository Rates { get; }
+        IBaseRepository<CarBrand> CarBrands { get; }
         IBaseRepository<CarFeatures> CarFeatures { get; }
-        IBaseRepository<CarModel> CarModel { get; }
-        IFeatureRepository Feature { get; }
+        IBaseRepository<CarModel> CarModels { get; }
+        IFeatureRepository Features { get; }
         IBaseRepository<ModelGallery> ModelGalleries { get; }
-        IBaseRepository<RefreshToken> RefreshToken { get; }
+        IBaseRepository<RefreshToken> RefreshTokens { get; }
         IBaseRepository<BlacklistedToken> blacklistedTokens { get; }
         Task SaveChangesAsync();
     }
